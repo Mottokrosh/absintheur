@@ -11,6 +11,11 @@ Vue.use(VueRouter);
 
 export var router = new VueRouter();
 
+import auth from './auth';
+
+// Check the users auth status when the app starts
+auth.checkAuth();
+
 // Set up routing and match routes to components
 router.map({
 	'/home': {
