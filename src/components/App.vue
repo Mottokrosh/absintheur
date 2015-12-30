@@ -8,7 +8,7 @@
 		</ul>
 	</nav>
 	<div class="container">
-		<router-view></router-view>
+		<router-view transition="slide"></router-view>
 	</div>
 </template>
 

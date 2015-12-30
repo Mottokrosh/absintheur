@@ -1,2 +1,19 @@
 @import './reset.css';
 @import './navigation.css';
+
+main {
+	background-color: blue;
+}
+
+.slide-transition {
+	transition: all 500ms ease;
+	transform: translateX(0);
+}
+
+.slide-enter {
+	transform: translateX(100%);
+}
+
+.slide-leave {
+	transform: translateX(-100%);
+}
