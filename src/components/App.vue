@@ -3,10 +3,12 @@
 		<div>
 			<ul>
 				<li><a v-link="'home'">Home</a></li>
-				<li v-if="!user.authenticated"><a v-link="'login'">Login</a></li>
+				<li><a v-link="'library'">Library</a></li>
+				<li><a v-link="'shop'">Shop</a></li>
+				<li><a v-link="'collection'">Collection</a></li>
+				<!-- <li v-if="!user.authenticated"><a v-link="'login'">Login</a></li>
 				<li v-if="!user.authenticated"><a v-link="'signup'">Sign Up</a></li>
-				<li v-if="user.authenticated"><a v-link="'secretquote'">Secret Quote</a></li>
-				<li v-if="user.authenticated"><a v-link="'login'" @click="logout()">Logout</a></li>
+				<li v-if="user.authenticated"><a v-link="'login'" @click="logout()">Logout</a></li> -->
 			</ul>
 		</div>
 	</nav>
