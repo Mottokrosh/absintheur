@@ -2,25 +2,4 @@ $navHeight: 50px;
 
 @import './reset.css';
 @import './navigation.css';
-
-main {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: $navHeight;
-	left: 0;
-	background-color: blue;
-}
-
-.slide-transition {
-	transition: all 500ms ease;
-	transform: translateX(0);
-}
-
-.slide-enter {
-	transform: translateX(100%);
-}
-
-.slide-leave {
-	transform: translateX(-100%);
-}
+@import './library.css';

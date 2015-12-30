@@ -1,6 +1,13 @@
 <template>
-	<main role="main">
-		<h1>Library</h1>
+	<main role="main" class="library">
+		<article v-for="book in books">
+			<header>
+				<h2>{{book.title}}</h2>
+			</header>
+			<div class="content">
+				{{book.content}}
+			</div>
+		</article>
 	</main>
 </template>
 
@@ -8,6 +15,28 @@
 export default {
 	data() {
 		return {
+			books: [
+				{
+					title: 'Book One',
+					content: 'Placeholder'
+				},
+				{
+					title: 'Book Two',
+					content: 'Placeholder'
+				},
+				{
+					title: 'Book Three',
+					content: 'Placeholder'
+				},
+				{
+					title: 'Book Four',
+					content: 'Placeholder'
+				},
+				{
+					title: 'Book Five',
+					content: 'Placeholder'
+				}
+			]
 		}
 	},
 	methods: {
