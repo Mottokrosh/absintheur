@@ -5,30 +5,21 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-color: #d1d1d1;
+		background-color: hsla(0, 0%, 88%, 1);
 
-		&:nth-of-type(2) {
-			top: 2rem;
-			left: 1rem;
-			background-color: #d9d9d9;
-		}
+		&:nth-child(2n) { transform: rotate(0.75deg); }
+		&:nth-child(3n) { transform: scale(0.975) rotate(-0.25deg); }
+		&:nth-child(4n) { transform: none; }
+		&:nth-child(5n) { transform: rotate(-0.5deg); }
+	}
 
-		&:nth-of-type(3) {
-			top: 4rem;
-			left: 2rem;
-			background-color: #e2e2e2;
-		}
-
-		&:nth-of-type(4) {
-			top: 6rem;
-			left: 3rem;
-			background-color: #e9e9e9;
-		}
-
-		&:nth-of-type(5) {
-			top: 8rem;
-			left: 4rem;
-			background-color: #f3f3f3;
+	@for $i from 2 to 10 {
+		article:nth-of-type($i) {
+			top: calc(($i - 1) * 2.25)rem;
+			left: calc(($i - 1) * 1)rem;
+			box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+			background-color: hsla(0, 0%, calc(85 + $i * 3)%, 1);
 		}
 	}
+
 }
