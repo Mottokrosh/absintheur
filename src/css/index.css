@@ -1,7 +1,14 @@
+$navHeight: 50px;
+
 @import './reset.css';
 @import './navigation.css';
 
 main {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: $navHeight;
+	left: 0;
 	background-color: blue;
 }
 
