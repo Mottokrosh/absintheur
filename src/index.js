@@ -9,12 +9,18 @@ import VueResource from 'vue-resource';
 Vue.use(VueResource);
 Vue.use(VueRouter);
 
+const AUTH0_CLIENT_ID = 'F7aeZfiPqoL7Q6Z7c9P0qE87GVXZIJGf';
+const AUTH0_DOMAIN = 'mottokrosh.eu.auth0.com';
+
 export var router = new VueRouter();
 
 import auth from './auth';
 
 // Check the users auth status when the app starts
 auth.checkAuth();
+
+// Instantiate a Lock
+export var lock = new Auth0Lock(AUTH0_CLIENT_ID, AUTH0_DOMAIN);
 
 // Set up routing and match routes to components
 router.map({
