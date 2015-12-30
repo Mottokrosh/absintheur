@@ -15,6 +15,7 @@ var nano = require('gulp-cssnano');
 
 var path = {
 	'CSS': './src/css/index.css',
+	'ALL_CSS': './src/css/*.css',
 	'BUILD': './build'
 };
 
@@ -43,7 +44,7 @@ gulp.task('css', function () {
 //
 
 gulp.task('watchers', function () {
-	gulp.watch(path.CSS, ['css']);
+	gulp.watch(path.ALL_CSS, ['css']);
 });
 
 // Build and watch cycle (another option for development)

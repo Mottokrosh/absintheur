@@ -1,7 +1,7 @@
 <template>
-	<div>
+	<main role="main">
 		<h1>Shop</h1>
-	</div>
+	</main>
 </template>
 
 <script>
