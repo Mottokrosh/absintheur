@@ -1,6 +1,15 @@
 .library {
-	article {
+
+	& > div {
 		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	article {
+		position: absolute !important;
 		top: 0;
 		right: 0;
 		bottom: 0;
@@ -15,8 +24,8 @@
 
 	@for $i from 2 to 10 {
 		article:nth-of-type($i) {
-			top: calc(($i - 1) * 2.25)rem;
-			left: calc(($i - 1) * 1)rem;
+			margin-top: calc(($i - 1) * 2.25)rem;
+			margin-left: calc(($i - 1) * 1)rem;
 			box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 			background-color: hsla(0, 0%, calc(85 + $i * 3)%, 1);
 		}
