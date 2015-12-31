@@ -44,6 +44,7 @@ h1, h2, h3, h4 {
 	font-weight: bold;
 	color: $darkAlt;
 	text-transform: uppercase;
+	mix-blend-mode: multiply;
 }
 
 h1 {
