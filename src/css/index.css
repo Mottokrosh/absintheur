@@ -1,5 +1,10 @@
 $navHeight: 50px;
 
 @import './reset.css';
+@import './typography.css';
 @import './navigation.css';
 @import './library.css';
+
+.padded {
+	padding: 1rem;
+}

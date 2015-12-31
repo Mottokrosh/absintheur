@@ -16,7 +16,8 @@ var nano = require('gulp-cssnano');
 var path = {
 	'CSS': './src/css/index.css',
 	'ALL_CSS': './src/css/*.css',
-	'BUILD': './build'
+	'BUILD': './build',
+	'FONTS': './src/css/fonts/**/*.{eot,svg,ttf,woff,woff2}'
 };
 
 //
@@ -29,7 +30,7 @@ gulp.task('default', ['webpack-dev-server', 'watchers']);
 // CSS
 //
 
-gulp.task('css', function () {
+gulp.task('css', ['fonts'], function () {
 	return gulp.src(path.CSS)
 		.pipe(postcss([
 			precss(),
@@ -37,6 +38,15 @@ gulp.task('css', function () {
 		]))
 		.pipe(nano())
 		.pipe(gulp.dest(path.BUILD));
+});
+
+//
+// CSS Fonts
+//
+
+gulp.task('fonts', function () {
+	return gulp.src(path.FONTS)
+		.pipe(gulp.dest('build/fonts'));
 });
 
 //
