@@ -18,14 +18,17 @@
 
 			a {
 				flex: 1;
-				background-color: red;
+				background-color: $action;
 				padding: 1rem;
 				text-align: center;
-			}
+				color: $lightest;
+				font-family: 'amarante';
+				text-transform: uppercase;
+				font-weight: normal;
+				transition: background-color 200ms ease;
 
-			&:nth-of-type(odd) {
-				a {
-					background-color: green;
+				&:hover {
+					background-color: $actionFocus;
 				}
 			}
 		}

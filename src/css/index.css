@@ -1,7 +1,21 @@
+@import './reset.css';
+
 $navHeight: 50px;
 
-@import './reset.css';
+$light: #ffdd77;
+$lightest: #ddccaa;
+$dark: #220011;
+$darkAlt: #993311;
+$action: #002222;
+$actionFocus: #226666;
+$actionActive: #3399aa;
+
 @import './typography.css';
+
+body {
+	background-color: $light;
+}
+
 @import './navigation.css';
 @import './library.css';
 

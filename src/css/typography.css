@@ -36,11 +36,14 @@
 body {
 	font-family: 'goudy_bookletter_1911regular';
 	font-size: 1rem;
+	color: $dark;
 }
 
 h1, h2, h3, h4 {
 	font-family: 'amarante';
 	font-weight: bold;
+	color: $darkAlt;
+	text-transform: uppercase;
 }
 
 h1 {
@@ -57,4 +60,22 @@ h3 {
 
 h4 {
 	font-size: 1rem;
+}
+
+a {
+	color: $action;
+	text-decoration: none;
+	font-weight: bold;
+
+	&:visited {
+		color: $action;
+	}
+
+	&:focus {
+		color: $actionFocus;
+	}
+
+	&:active {
+		color: $actionActive;
+	}
 }
