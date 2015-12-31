@@ -17,7 +17,8 @@ var path = {
 	'CSS': './src/css/index.css',
 	'ALL_CSS': './src/css/*.css',
 	'BUILD': './build',
-	'FONTS': './src/css/fonts/**/*.{eot,svg,ttf,woff,woff2}'
+	'FONTS': './src/css/fonts/**/*.{eot,svg,ttf,woff,woff2}',
+	'IMG': './src/img/**/*.{png,jpg,gif}'
 };
 
 //
@@ -46,7 +47,17 @@ gulp.task('css', ['fonts'], function () {
 
 gulp.task('fonts', function () {
 	return gulp.src(path.FONTS)
-		.pipe(gulp.dest('build/fonts'));
+		.pipe(gulp.dest(path.BUILD + '/fonts'));
+});
+
+//
+// Optimise images
+//
+
+gulp.task('images', function () {
+	return gulp.src(path.IMG)
+		.pipe(imagemin())
+		.pipe(gulp.dest(path.BUILD + '/img'));
 });
 
 //
@@ -55,22 +66,14 @@ gulp.task('fonts', function () {
 
 gulp.task('watchers', function () {
 	gulp.watch(path.ALL_CSS, ['css']);
-});
-
-// Build and watch cycle (another option for development)
-// Advantage: No server required, can run app from filesystem
-// Disadvantage: Requests are not blocked until bundle is available,
-//               can serve an old app on refresh
-
-gulp.task('build-dev', ['webpack:build-dev'], function() {
-	gulp.watch(['app/**/*'], ['webpack:build-dev']);
+	gulp.watch(path.IMG, ['images']);
 });
 
 //
 // Production build
 //
 
-gulp.task('build', ['css', 'webpack:build']);
+gulp.task('build', ['css', 'images', 'webpack:build']);
 
 //
 // Webpack Build

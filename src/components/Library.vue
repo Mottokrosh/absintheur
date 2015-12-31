@@ -2,11 +2,13 @@
 	<main role="main" class="library">
 		<div id="scene">
 			<article v-for="book in books" class="layer" data-depth="{{ $index / 10 }}">
-				<header>
-					<h2>{{book.title}}</h2>
-				</header>
-				<div class="content">
-					{{book.content}}
+				<div>
+					<header>
+						<h2>{{book.title}}</h2>
+					</header>
+					<div class="content">
+						{{book.content}}
+					</div>
 				</div>
 			</article>
 		</div>

@@ -4,6 +4,7 @@
 	bottom: 0;
 	right: 0;
 	height: $navHeight;
+	background-color: $action;
 
 	ul {
 		margin: 0;
@@ -11,9 +12,9 @@
 		list-style: none;
 		width: 100%;
 		display: flex;
+		justify-content: space-around;
 
 		li {
-			flex: 1;
 			display: flex;
 
 			a {

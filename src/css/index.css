@@ -3,6 +3,7 @@
 $navHeight: 50px;
 
 $light: #ffdd77;
+$light2: #eecc33;
 $lightest: #ddccaa;
 $dark: #220011;
 $darkAlt: #993311;
@@ -14,6 +15,11 @@ $actionActive: #3399aa;
 
 body {
 	background-color: $light;
+}
+
+main {
+	background-image: url(img/texture.jpg);
+	background-size: 100% 100%;
 }
 
 @import './navigation.css';

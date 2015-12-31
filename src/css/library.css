@@ -14,20 +14,60 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-color: hsla(0, 0%, 88%, 1);
 
-		&:nth-child(2n) { transform: rotate(0.75deg); }
-		&:nth-child(3n) { transform: scale(0.975) rotate(-0.25deg); }
-		&:nth-child(4n) { transform: none; }
-		&:nth-child(5n) { transform: rotate(-0.5deg); }
+		&:nth-child(2n) > div { transform: rotate(0.75deg); }
+		&:nth-child(3n) > div { transform: scale(0.975) rotate(-0.25deg); }
+		&:nth-child(4n) > div { transform: none; }
+		&:nth-child(5n) > div { transform: rotate(-0.5deg); }
+
+		& > div {
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background-image: url(img/texture.jpg);
+			background-size: 100% 100%;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				background-color: rgba(0, 0, 0, 0.8);
+			}
+		}
+
+		header {
+			padding: 1rem;
+
+			h2 {
+				margin: 0;
+				mix-blend-mode: multiply;
+			}
+		}
+
+		.content {
+			padding: 0 1rem 1rem 1rem;
+			overflow: hidden;
+			overflow-y: auto;
+		}
 	}
 
 	@for $i from 2 to 10 {
 		article:nth-of-type($i) {
-			margin-top: calc(($i - 1) * 2.25)rem;
+			margin-top: calc(($i - 1) * 3)rem;
 			margin-left: calc(($i - 1) * 1)rem;
-			box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-			background-color: hsla(0, 0%, calc(85 + $i * 3)%, 1);
+
+			& > div {
+				box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+
+				&:after {
+					background-color: rgba(0, 0, 0, calc(1 - $i * 2 / 10));
+				}
+			}
 		}
 	}
 
