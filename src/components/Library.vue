@@ -21,23 +21,23 @@ export default {
 		return {
 			books: [
 				{
-					title: 'Book One',
+					title: 'About Alandia',
 					content: 'Placeholder'
 				},
 				{
-					title: 'Book Two',
+					title: 'La Fée Verte',
 					content: 'Placeholder'
 				},
 				{
-					title: 'Book Three',
+					title: 'The Ritual',
 					content: 'Placeholder'
 				},
 				{
-					title: 'Book Four',
+					title: 'History of Absinthe',
 					content: 'Placeholder'
 				},
 				{
-					title: 'Book Five',
+					title: 'What is Absinthe?',
 					content: 'Placeholder'
 				}
 			]
