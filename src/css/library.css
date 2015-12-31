@@ -37,6 +37,7 @@
 				left: 0;
 				bottom: 0;
 				background-color: rgba(0, 0, 0, 0.8);
+				pointer-events: none;
 			}
 		}
 
@@ -45,6 +46,10 @@
 
 			h2 {
 				margin: 0;
+
+				a {
+					color: inherit;
+				}
 			}
 		}
 

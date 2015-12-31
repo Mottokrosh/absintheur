@@ -4,7 +4,7 @@
 			<article v-for="book in books" class="layer" data-depth="{{ $index / 10 }}">
 				<div>
 					<header>
-						<h2>{{book.title}}</h2>
+						<h2><a href="#" v-on:click.prevent="showBook">{{book.title}}</a></h2>
 					</header>
 					<div class="content">
 						{{book.content}}
@@ -46,6 +46,9 @@ export default {
 		}
 	},
 	methods: {
+		showBook(evt) {
+			console.log('show', evt);
+		}
 	},
 	ready() {
 		var scene = document.getElementById('scene');
