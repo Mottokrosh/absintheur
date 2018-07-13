@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import Parallax from 'parallax-js';
 var parallax;
 
 export default {

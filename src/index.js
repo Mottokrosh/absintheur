@@ -8,7 +8,7 @@ import Signup from './components/Signup.vue';
 import Login from './components/Login.vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
-import Parallax from 'parallax/deploy/parallax.js';
+import Parallax from 'parallax-js';
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
